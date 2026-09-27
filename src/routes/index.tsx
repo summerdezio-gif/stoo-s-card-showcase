@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
+import { SiteFooter, SiteNav } from "@/components/site-chrome";
 import cardFlame from "@/assets/card-flame.png";
 import cardTide from "@/assets/card-tide.png";
 import cardVolt from "@/assets/card-volt.png";
@@ -72,30 +73,6 @@ const stats = [
   { value: "11", label: "types" },
 ];
 
-function SiteNav() {
-  return (
-    <header className="border-b border-border">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/" className="font-display text-lg font-bold italic tracking-tight">
-          Stoo's&nbsp;
-          <span className="text-accent-gradient">Cards</span>
-        </a>
-        <div className="flex items-center gap-1 font-mono text-xs">
-          <span className="bg-accent-gradient rounded-full px-4 py-2 font-medium text-primary-foreground">
-            Accueil
-          </span>
-          <Link
-            to="/"
-            className="rounded-full px-4 py-2 text-muted-foreground transition-colors hover:text-foreground"
-          >
-            La Collection
-          </Link>
-        </div>
-      </nav>
-    </header>
-  );
-}
-
 function FanCardItem({ card }: { card: FanCard }) {
   return (
     <div
@@ -131,7 +108,7 @@ function FanCardItem({ card }: { card: FanCard }) {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteNav />
+      <SiteNav active="home" />
 
       <main className="hero-glow">
         <section className="mx-auto max-w-6xl px-6 pt-14 pb-16 sm:pt-20 lg:pt-24 lg:pb-24">
@@ -153,7 +130,7 @@ function Index() {
 
               <div className="mt-8">
                 <Link
-                  to="/"
+                  to="/collection"
                   className="bg-accent-gradient shadow-accent-glow inline-flex items-center gap-2 rounded-full px-6 py-3 font-display text-sm font-bold tracking-tight text-primary-foreground transition-opacity hover:opacity-90"
                 >
                   Voir la collection <span aria-hidden>→</span>
@@ -189,13 +166,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-6 py-6">
-          <p className="font-mono text-[11px] text-muted-foreground">
-            © 2026 Stoo's Cards — Projet fan-made, sans affiliation.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
