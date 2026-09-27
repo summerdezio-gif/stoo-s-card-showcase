@@ -43,7 +43,7 @@ const fanCards: FanCard[] = [
     hp: "140 PV",
     image: cardFlame,
     rotate: -11,
-    left: "12%",
+    left: "10%",
     zIndex: 10,
   },
   {
@@ -61,7 +61,7 @@ const fanCards: FanCard[] = [
     hp: "150 PV",
     image: cardVolt,
     rotate: 9,
-    left: "88%",
+    left: "90%",
     zIndex: 20,
   },
 ];
@@ -99,7 +99,7 @@ function SiteNav() {
 function FanCardItem({ card }: { card: FanCard }) {
   return (
     <div
-      className="absolute top-1/2 w-40 rounded-2xl border border-border bg-card p-2 shadow-accent-glow sm:w-48 lg:w-56"
+      className="absolute top-1/2 w-40 rounded-2xl border border-border bg-card p-2 shadow-accent-glow sm:w-48 lg:w-52"
       style={{
         left: card.left,
         transform: `translate(-50%, -52%) rotate(${card.rotate}deg)`,
