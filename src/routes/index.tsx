@@ -43,7 +43,7 @@ const fanCards: FanCard[] = [
     hp: "140 PV",
     image: cardFlame,
     rotate: -11,
-    left: "14%",
+    left: "12%",
     zIndex: 10,
   },
   {
@@ -61,7 +61,7 @@ const fanCards: FanCard[] = [
     hp: "150 PV",
     image: cardVolt,
     rotate: 9,
-    left: "86%",
+    left: "88%",
     zIndex: 20,
   },
 ];
@@ -179,7 +179,7 @@ function Index() {
 
             <div
               aria-hidden
-              className="relative mx-auto h-[400px] w-full max-w-md sm:h-[460px] lg:h-[540px]"
+              className="relative mx-auto h-[400px] w-full max-w-lg sm:h-[460px] lg:h-[540px]"
             >
               {fanCards.map((card) => (
                 <FanCardItem key={card.name} card={card} />
