@@ -108,7 +108,7 @@ function FanCardItem({ card }: { card: FanCard }) {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <SiteNav />
+      <SiteNav active="home" />
 
       <main className="hero-glow">
         <section className="mx-auto max-w-6xl px-6 pt-14 pb-16 sm:pt-20 lg:pt-24 lg:pb-24">
