@@ -53,7 +53,7 @@ const fanCards: FanCard[] = [
     image: cardTide,
     rotate: -1,
     left: "50%",
-    zIndex: 30,
+    zIndex: 20,
   },
   {
     name: "Voltafoudre",
@@ -62,7 +62,7 @@ const fanCards: FanCard[] = [
     image: cardVolt,
     rotate: 9,
     left: "90%",
-    zIndex: 20,
+    zIndex: 30,
   },
 ];
 
