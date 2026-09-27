@@ -5,7 +5,11 @@ const pillActive =
 const pillIdle =
   "rounded-full px-4 py-2 text-muted-foreground transition-colors hover:text-foreground";
 
-export function SiteNav({ active }: { active: "home" | "collection" }) {
+export function SiteNav({
+  active,
+}: {
+  active: "home" | "collection" | "profil";
+}) {
   return (
     <header className="border-b border-border">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -24,6 +28,12 @@ export function SiteNav({ active }: { active: "home" | "collection" }) {
             className={active === "collection" ? pillActive : pillIdle}
           >
             La Collection
+          </Link>
+          <Link
+            to="/profil"
+            className={active === "profil" ? pillActive : pillIdle}
+          >
+            Mon Profil
           </Link>
         </div>
       </nav>
